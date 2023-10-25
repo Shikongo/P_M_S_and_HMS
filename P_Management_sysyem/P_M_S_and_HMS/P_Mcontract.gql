@@ -1,0 +1,208 @@
+type Query {
+    profile: User!
+}
+
+type User {
+    User1:HOD
+    User2:Supervisor
+    User3:Employee
+}
+
+
+
+Type HOD{
+
+  Mutation deleteDepartmentObjective(){
+
+
+  }
+  # creating a new iobject in 
+  mutation Createclass {
+  CreateDepartmentObjective(input:{
+    name: "Hero"
+    schemaFields: {
+      addStrings: [{name: "name"}]
+      addNumbers: [{name: "height"}]
+    }
+  }){
+    class{
+      schemaFields{
+        name
+        __typename
+      }
+    }
+  }
+}
+
+{
+
+  employee(staffId){
+
+
+  }
+
+  EmployeesTotalScore{
+
+
+  }
+}
+
+# assigning roles to user
+query {
+  user(by:{$ id:integer}) {
+    name
+    capabilities
+    roles {
+      name
+    }
+  }
+}
+
+
+
+}
+
+type Supervisor {
+
+# query to insert
+
+mutation {
+gradeEmployeeKPI($ id: integer){
+  absenteeism: double
+  AverageTenure: integer
+  TurnOverate: double
+  jobSatisfation: double
+
+}
+type Query {
+   EmployeeScore:[EmployeeScore]
+   User(id:ID!):User
+}
+
+type EmployeeScore(
+ $ EmployeeScoreID: integer
+) {
+   measure: String
+   TotalScore:integer
+   productive:double
+   collabatingratio: double
+   researhskills: double 
+}
+
+
+
+}
+
+
+
+  mutation   {
+
+Delete EmployeeKPIs($ id: integer)
+Update EmployeeKPIs($ id: integer)
+
+
+  }
+
+  
+
+
+
+
+  #Approve Employee's KPIs.
+#Delete Employee’s KPIs.
+#Update Employee's KPIs.
+#View Employee Scores. (Only employees assigned to him/her).
+#Grade the employee’s KPIs>
+
+}
+
+
+
+
+
+type employee {
+
+
+
+#Create their KPIs
+mutation CreateClass {
+  createClass(input:{
+    Supervisor: "Hero"
+    schemaFields: {
+      FirstName: [{$ name: String}]
+     
+    }
+  }){
+    class{
+      schemaFields{     confidentiality: integer
+    iniatiatives
+    communication
+    Professionalism
+    TotalScore
+       
+      }
+    }
+  }
+}
+
+mutation CreateObject{
+  createSupervisorKPI(input: {fields: {name: "R2-D2"}}){
+    SupervisorKPI{
+         confidentiality: integer
+    iniatiatives: integer
+    communication: integer
+    Professionalism: integer
+    TotalScore: integer
+      
+    }
+  }
+}
+
+
+#Grade their Supervisor INSERTING
+query GradeSupervisor {
+  SupervisorKPI
+   {
+    confidentiality: integer
+    iniatiatives: integer
+    communication: integer
+    Professionalism: integer
+    TotalScore: integer
+  }
+}
+
+
+#View Their Scores (READ DATA)
+query ViewScores {
+  EmployeeScore {
+    measure: String
+   TotalScore:integer
+   productive:double
+   collabatingratio: double
+   researhskills: double 
+
+    
+  }
+
+
+
+  sql:ExecutionResult result = 
+                check dbClient->execute(`CREATE TABLE EmployeeScore (
+                                           id INT AUTO_INCREMENT,
+                                           age INT, 
+                                           name VARCHAR(255), 
+                                           PRIMARY KEY (id)
+                                         )`);
+}
+
+
+
+
+
+
+
+
+
+
+  
+}

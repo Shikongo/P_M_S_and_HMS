@@ -1,0 +1,24 @@
+[package]
+org = "chris"
+name = "P_Management_sysyem"
+version = "0.1.0"
+distribution = "2201.7.0"
+
+[build-options]
+observabilityIncluded = true
+
+
+[[platform.java17.dependency]]
+path = "PATH"
+
+[[platform.java17.dependency]]
+groupId = "org.postgresql"
+artifactId = "postgresql"
+version = "42.2.20"
+
+
+
+[container.image]
+repository="wso2inc" # Docker hub repository name.
+name="greeter" # container name
+tag="latest"
